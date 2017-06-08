@@ -26,7 +26,7 @@
 				var input=document.getElementById("input");
 				var compelete=document.getElementsByTagName("a")[2];
 				var text=input.value;
-				if(text!=""){
+				if(text.replace(/(^\s*)|(\s*$)/g, "").length!=0){
 					var newline=document.createElement("div");
 					newline.setAttribute("class","listline");
 					var newicon=document.createElement("i");
