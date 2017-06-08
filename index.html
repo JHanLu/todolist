@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/Font-Awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/new_file.css" type="text/css" />
+		<script src="js/new_file.js"></script>
+	</head>
+	<body >
+		<h1>TODOS</h1>
+		<div class="main" id="main">
+		<div class="inputline">
+			<i class="icon-ok-circle icon-2x" onclick="checkall(this)" id="allbtn"></i>
+			<form >
+			<input type="text" id="input" placeholder="What Needs To Be Done"  onkeypress="if(event.keyCode==13)addlist();" autocomplete="off"/>
+			<input type="text" style="display: none;"/>
+			</form>
+		</div>
+		<div class="listdiv" id="listdiv"></div>
+		<footer class="info">
+			<div class="items" id="items">0 item</div>
+			<a href="#" class="selected" onclick="select(this)">All</a>
+			<a href="#" class="unselected" onclick="select(this)">Active</a>
+			<a href="#" class="unselected" onclick="select(this)">Compeleted</a>
+		</footer>
+		</div>
+	</body>
+</html>
