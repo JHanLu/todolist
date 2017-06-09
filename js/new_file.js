@@ -20,6 +20,15 @@
 				if(childs.length==0){
 					document.getElementById("allbtn").style.color="grey";
 				}
+				
+				//有已完成的项目
+				if(childs.length-j>0){
+					document.getElementById("deletecbtn").style.display="block";
+				}
+				//没有已完成的项目
+				else{
+					document.getElementById("deletecbtn").style.display="none";
+				}
 			}
 			function addlist(){//添加list
 				var listdiv=document.getElementById("listdiv");
@@ -112,7 +121,7 @@
 				}
 			function select(obj){//选择分类
 				var alist=document.getElementsByTagName("a");
-				for(var i=0;i<alist.length;i++){
+				for(var i=0;i<alist.length-1;i++){
 					alist[i].setAttribute("class","unselected");
 				}
 				obj.setAttribute("class","selected");
@@ -156,4 +165,20 @@
 					parent.parentNode.removeChild(parent);
 					update();
 				}
+			}
+			
+			//删除已完成项目
+			function clearcompeleted(){
+				var sum=0;
+				var lists=document.getElementsByClassName("listline");
+				for(var i=0;i<lists.length;i++){
+					var childs=lists[i].childNodes;
+					if(childs[0].style.color=="green"){
+						lists[i].parentNode.removeChild(lists[i]);
+						lists=document.getElementsByClassName("listline");
+						i=i-1;
+					}
+				}
+				update();
+			
 			}
