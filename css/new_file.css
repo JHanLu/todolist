@@ -73,7 +73,7 @@
 			}
 			.close_svg{
 				display: inline-block;
-				background-image: url("https://github.com/JHanLu/todolist/blob/master/img/close.svg");
+				background-image: url('../img/close.svg');
 				width:30px;
 				height:30px;
 				background-size: 30px 30px;
