@@ -2,28 +2,37 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>ToDoList</title>
 		<link rel="stylesheet" href="css/Font-Awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/new_file.css" type="text/css" />
-		<script src="js/new_file.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/new_file.js"></script>
 	</head>
 	<body >
 		<h1>TODOS</h1>
 		<div class="main" id="main">
 		<div class="inputline">
-			<i class="icon-ok-circle icon-2x" onclick="checkall(this)" id="allbtn"></i>
+			<i class="icon-ok-circle icon-2x" id="allbtn"></i>
 			<form >
-			<input type="text" id="input" placeholder="What Needs To Be Done"  onkeypress="if(event.keyCode==13)addlist();" autocomplete="off"/>
+			<input type="text" id="input" placeholder="What Needs To Be Done"  autocomplete="off"/>
 			<input type="text" style="display: none;"/>
 			</form>
 		</div>
-		<div class="listdiv" id="listdiv"></div>
-		<footer class="info">
-			<div class="items" id="items">0 item</div>
-			<a href="#" class="selected" onclick="select(this)">All</a>
-			<a href="#" class="unselected" onclick="select(this)">Active</a>
-			<a href="#" class="unselected" onclick="select(this)">Compeleted</a>
-			<a href="#" class="clearcompeleted" id="deletecbtn" onclick="clearcompeleted()">Clear compeleted</a>
+		<div class="listarea">
+		<ul>
+			<li><i class="icon-ok-circle icon-2x checked"></i><input type="text" value="yes" class="done"><img src="img/close.svg" class="close_svg"></li>
+			<li><i class="icon-ok-circle icon-2x"></i><input type="text" value="yes"></li>
+			<li><i class="icon-ok-circle icon-2x"></i><input type="text" value="yes"></li>
+		</ul>
+		</div>
+		<footer>
+			<span class="info">0 items</span>
+			<ul>
+				<li><a href="javascript:" class="search-type active">All</a></li>
+				<li><a href="javascript:" class="search-type">Active</a></li>
+				<li><a href="javascript:" class="search-type">Completed</a></li>
+				<li><a href="javascript:" class="clear">Clear completed</a></li>
+			</ul>
 		</footer>
 		</div>
 	</body>
