@@ -87,7 +87,7 @@
 						tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<img src="img/close.svg" class="close_svg">'+
+						  '<span class="close_svg"></span>'+
 						  '</li>';
 					}
 				}
@@ -98,7 +98,7 @@
 						tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<img src="img/close.svg" class="close_svg">'+
+						  '<span class="close_svg"></span>'+
 						  '</li>';
 					}
 				}
@@ -108,7 +108,7 @@
 					tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<img src="img/close.svg" class="close_svg">'+
+						  '<span class="close_svg"></span>'+
 						  '</li>';
       			}  
       		}

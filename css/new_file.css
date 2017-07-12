@@ -72,9 +72,11 @@
 				text-decoration: line-through;
 			}
 			.close_svg{
+				display: inline-block;
+				background-image: url("../img/close.svg");
 				width:30px;
 				height:30px;
-				margin-top:2px;
+				background-size: 30px 30px;
 				cursor: pointer;
 				
 				transition:All 0.5s ease-in-out; 
@@ -100,3 +102,4 @@
 				margin-left:10px;
 				text-decoration: underline;
 			}
+
