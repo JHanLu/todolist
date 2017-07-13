@@ -38,8 +38,14 @@
 				text-decoration: none;
 				color: grey;
 			}
-			i:hover{
+			#input{
+				height:36px;
+			}
+			.icon-ok-circle:hover{
 				color:green;
+			}
+			.icon-remove{
+				color:grey;
 			}
 			.main{
 				width:430px;
@@ -73,10 +79,8 @@
 			}
 			.close_svg{
 				display: inline-block;
-				background-image: url("https://github.com/JHanLu/todolist/blob/master/img/close.svg");
 				width:30px;
 				height:30px;
-				background-size: 30px 30px;
 				cursor: pointer;
 				
 				transition:All 0.5s ease-in-out; 
@@ -85,11 +89,11 @@
 				-o-transition:All 0.5s ease-in-out; 
 			}
 			.close_svg:hover{
-				transform:rotate(180deg); 
-				-webkit-transform:rotate(180deg);    
-				-moz-transform:rotate(180deg);   
-				-o-transform:rotate(180deg);    
-				-ms-transform:rotate(180deg);
+				transform:scale(1.2); 
+				-webkit-transform:scale(1.2);    
+				-moz-transform:scale(1.2);   
+				-o-transform:scale(1.2);    
+				-ms-transform:scale(1.2);
 			}
 			.info{
 				margin:0 5px 0 4px;

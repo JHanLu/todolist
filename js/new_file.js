@@ -10,7 +10,7 @@
 			});
 			
 			update();
-		}).on('click','i',function(){
+		}).on('click','.icon-ok-circle',function(){
 			var $this = $(this);
 			
 			checkone($this);
@@ -87,7 +87,7 @@
 						tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<span class="close_svg"></span>'+
+						  '<i class="icon-remove icon-2x close_svg"></i>'+
 						  '</li>';
 					}
 				}
@@ -98,7 +98,7 @@
 						tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<span class="close_svg"></span>'+
+						  '<i class="icon-remove icon-2x close_svg"></i>'+
 						  '</li>';
 					}
 				}
@@ -108,7 +108,7 @@
 					tmpl+='<li data-id="'+list[o].id+'">'+
 						  '<i class="icon-ok-circle icon-2x '+(list[o].status=="true"?'checked' :'')+'"></i>'+
 						  '<input type="text" value="'+list[o].item+'" class="'+(list[o].status=="true"?'done' :'')+'">'+
-						  '<span class="close_svg"></span>'+
+						  '<i class="icon-remove icon-2x close_svg"></i>'+
 						  '</li>';
       			}  
       		}
