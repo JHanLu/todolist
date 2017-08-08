@@ -25,6 +25,7 @@ input{
   border-style: none;
   font: 20px "微软雅黑";
   color:grey;
+  margin-left: 10px;
 }
 footer ul,footer li{
   display: inline-block;
