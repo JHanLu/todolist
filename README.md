@@ -4,3 +4,12 @@
 
 ### React Version
 The folder react-todo contains a react version of todolist
+
+how to use
+
+```bash
+$> git clone https://github.com/JHanLu/todolist.git <dev>
+$> cd <dev>/rect-todo
+$> npm install
+$> npm start
+```
