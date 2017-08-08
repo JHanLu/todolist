@@ -23,18 +23,20 @@ class TodoApp extends React.Component{
 		}
 	}
 	checkHandle(index){
+		console.log(index);
 		let list=this.state.list;
 		list[index].status=!list[index].status;
 		this.setState({
-			list: list,
+			//list: list,
 			checknum: list[index].status?(++this.state.checknum):(--this.state.checknum)
 		})
 	}
 	delHandle(index){
+		console.log(index);
 		let list=this.state.list;
 		let checknum=list[index].status==true?(--this.state.checknum):(this.state.checknum);
-		console.log(checknum)
-		list=list.splice(index,1);
+		list.splice(index,1);
+		//console.log(list)
 		this.setState({
 			//list: list,
 			num: --this.state.num,
@@ -103,7 +105,7 @@ class TodoApp extends React.Component{
 						return(
 						      <li key={index}>
 						      		<i className={"icon-ok-circle icon-2x " + (item.status==true?"checked":"")} onClick={this.checkHandle.bind(this,index)}/>
-						     		<input type="text" defaultValue={item.title} className={(item.status==true?"done":"")} />
+						     		<input type="text" value={item.title} className={(item.status==true?"done":"")} />
 						     		<i className="icon-remove icon-2x close_svg" onClick={this.delHandle.bind(this,index)}/>
 						      </li>
 						)}
@@ -112,7 +114,7 @@ class TodoApp extends React.Component{
 								return(
 								      <li key={index}>
 								      		<i className={"icon-ok-circle icon-2x " + (item.status==true?"checked":"")} onClick={this.checkHandle.bind(this,index)}/>
-								     		<input type="text" defaultValue={item.title} className={(item.status==true?"done":"")} />
+								     		<input type="text" value={item.title} className={(item.status==true?"done":"")} />
 								     		<i className="icon-remove icon-2x close_svg" onClick={this.delHandle.bind(this,index)}/>
 								      </li>
 								)}		
@@ -122,7 +124,7 @@ class TodoApp extends React.Component{
 								return(
 								      <li key={index}>
 								      		<i className={"icon-ok-circle icon-2x " + (item.status==true?"checked":"")} onClick={this.checkHandle.bind(this,index)}/>
-								     		<input type="text" defaultValue={item.title} className={(item.status==true?"done":"")} />
+								     		<input type="text" value={item.title} className={(item.status==true?"done":"")} />
 								     		<i className="icon-remove icon-2x close_svg" onClick={this.delHandle.bind(this,index)}/>
 								      </li>
 								)}									
